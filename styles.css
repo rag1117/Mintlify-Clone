@@ -34,15 +34,33 @@ textarea{
 
 #navbar{
   /* border: 2px solid red; */
+  position:sticky;
+  top: 0;
+  z-index: 1000;  
+
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
   align-items: center;
-  background:transparent;
-  width: 80vw;
-  margin: 3px auto;
-  padding: 14px 5px;
+
+  background: rgba(255, 255, 255, 0.028); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  width: 100vw;
+  margin: 0 auto;
+  padding: 14px 40px;
+
   font-size: 25px;
   color: #fff;
+}
+
+#navbar.scrolled {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 button{
@@ -63,6 +81,7 @@ button:hover{
 .nav-child1 p{
   font-weight:600;
 }
+
 
 #nav-last-first{
   background-color: rgba(186, 186, 186, 0.144);
@@ -192,4 +211,18 @@ button:hover{
   background-color: rgba(186, 186, 186, 0.931);
 }
 
+.preview-wrapper{
+  position: relative;
+  max-width: 1100px;
+  margin-top: 96px ; 
+  border: 2px solid var(--on-hover);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.preview-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
